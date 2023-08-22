@@ -1,0 +1,43 @@
+{
+  "name": "Zoe",
+  "quote": ":-)",
+  "imgSrc": "/zoe.jpeg",
+  "pronouns": "she/her",
+  "position": "Front End Web Developer",
+  "location": {
+    "city": "Vancouver",
+    "province": "BRITISH COLUMBIA",
+    "country": "Canada"
+  },
+  "github": "https://github.com/zoesteel",
+  "skills": [
+    "HTML",
+    "CSS",
+    "SCSS",
+    "WordPress",
+    "JavaScript",
+    "React",
+    "TypeScript",
+    "React Router",
+    "Redux",
+    "PHP",
+    "Node",
+    "MySQL",
+    "GraphQL",
+    "Next.js",
+    "Apollo"
+  ],
+  "interests": [
+
+  ],
+  "music": [
+    "My Chemical Romance",
+    "Fall Out Boy",
+    "Alexisonfire",
+    "The Used",
+    "Bowling For Soup"
+  ],
+  "status": "Employed",
+  "herefor": "My next role",
+  "aboutme": "I'm a web developer. Below you can see my top 8 projects"
+}

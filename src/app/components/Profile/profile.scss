@@ -1,0 +1,46 @@
+@import '../../app.scss';
+
+.profile {
+  &--container {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: 2fr 4fr;
+    column-gap: 3rem;
+    row-gap: 2rem;;
+    padding: 2rem;
+  }
+
+  &--network {
+    background-color: hsla(0, 0%, 100%, 0.8);
+    border: 1px solid black;
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0 auto 2rem auto;
+  }
+
+  &--section {
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    background-color: hsla(0, 0%, 100%, 0.8);
+
+    &-heading {
+      background-color: $medium-blue;
+      color: #D3610F;
+      font-weight: 600;
+      padding: 3px 1rem;
+    }
+
+    &-friends-grid {  
+      display: grid;
+      grid-gap: 1.5rem;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 1fr;
+      
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import '../../../app.scss';
+
+.interests {
+  // background-color: #CEDFF4;
+  // border: 3px solid #79B0E1;
+
+  &--title {
+    // grid-area: 1 / 1 / 2 / 3;
+    // background-color: #79B0E1;
+    // color: white;
+    // padding: 3px;
+  }
+
+  &--info {
+    padding: 3px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+    > div {
+      padding: 5px;
+    }
+  }
+
+  &--category {
+    background-color: $light-blue;
+    color: #4F6B88;
+    font-weight: 500;
+  }
+}

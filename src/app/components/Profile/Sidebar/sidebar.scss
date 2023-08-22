@@ -1,0 +1,48 @@
+@import '../../../app.scss';
+
+.profile {
+  &--sidebar {
+    display: grid;
+    grid-auto-flow: inherit;
+    grid-row-gap: 2rem;
+    
+    .sidebar-component {
+      border: 3px solid $medium-blue;
+      background-color: hsla(0, 0%, 100%, 0.8);
+
+      &--title {
+        color: white;
+        background-color: #79B0E1;
+        padding: 3px;
+      }
+    }
+
+    .profile--myspace-url {
+      border: 2px solid $medium-blue;
+      padding: 3px;
+    }
+  }
+
+
+
+  &--intro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 8px;
+
+    .profile--photo {
+      grid-area: 1 / 1 / 7 / 2;
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  &--details-table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    //temp
+    min-height: 100px;
+  }
+}
