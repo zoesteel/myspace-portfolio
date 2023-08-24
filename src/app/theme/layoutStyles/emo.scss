@@ -1,0 +1,39 @@
+@import '../colours.scss';
+.profile--container {
+  &.emo {
+    background-color: black;
+    background-image:  url('../../../../public/emo.jpeg');
+    
+    .profile {
+      &--section {
+        background-color: hsla(0, 0%, 0%, 0.9);
+        border: 4px solid white;
+        color: white;
+      }
+
+      &--section-heading {
+        background-color: black;
+        color: var(--dark-pink);
+      }
+
+      &--network {
+        background-color: hsla(0, 0%, 0%, 0.9);
+        color: white;
+      }
+
+      // Projects.
+      &--section-friends-project {
+        background-color: hsla(0, 0%, 0%, 0.9);
+        color: white;
+      }
+    }
+
+    // Sidebar.
+    .interests {
+      &--category {
+        background-color: lightgray;
+        color: black;
+      }
+    }
+  }
+}

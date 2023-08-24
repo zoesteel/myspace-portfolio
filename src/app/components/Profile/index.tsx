@@ -1,10 +1,9 @@
 "use client"
 // import Image from "next/image";
 // import '../../app.scss';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
-
 
 import './profile.scss';
 
@@ -16,13 +15,19 @@ export default function Profile({person}) {
   const [showDialog, setShowDialog] = useState(false);
   const projectOpen = () => setShowDialog(true);
   const projectClose = () => setShowDialog(false);
+
   const [layoutType, setLayoutType] = useState('default');
-  
+
+  useEffect(() => {
+    const storedLayout = JSON.parse(localStorage.getItem('layoutType'));
+    storedLayout ? setLayoutType(storedLayout) : setLayoutType('default');
+  }, []);
+
   const handleChange = (e) => {
     setLayoutType(e.target.value);
+    localStorage.setItem('layoutType', JSON.stringify(e.target.value));
   }
 
-  console.log(layoutType);
   return (
     <div className={`profile--container ${layoutType}`}>
       <Sidebar person={person} />
@@ -31,22 +36,22 @@ export default function Profile({person}) {
           {`${person.name} is in your extended network`}
         </div>
         
-        <div className="profile--section-blurbs">
+        <div className="profile--section profile--section-blurbs">
           <div className="profile--section-heading">
               <h4>{`${person.name}'s Blurbs`}</h4>
           </div>
-          <div className="profile--section">
+          <div className="profile--section-content">
             <h4>About Me:</h4>
             <p>{person.aboutme}</p>
             <h4>Change Style</h4>
-            <ColourSwitcher onChange={handleChange} />
+            <ColourSwitcher onChange={handleChange} layoutType={layoutType} />
           </div>
         </div>
-        <div className="profile--section-friends">
+        <div className="profile--section profile--section-friends">
           <div className="profile--section-heading">
             <h4>{`${person.name}'s Project Space`}</h4>
           </div>
-          <div className='profile--section profile--section-friends-grid'>
+          <div className='profile--section-content profile--section-friends-grid'>
             <Project person={person} onClick={projectOpen} />
             <Project person={person} onClick={projectOpen} />
             <Project person={person} onClick={projectOpen} />

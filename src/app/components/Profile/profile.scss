@@ -9,6 +9,7 @@
     column-gap: 3rem;
     row-gap: 2rem;;
     padding: 2rem;
+    border: 4px transparent;
   }
 
   &--network {
@@ -25,7 +26,6 @@
 
   &--section {
     margin-bottom: 2rem;
-    padding: 2rem 1rem;
     background-color: hsla(0, 0%, 100%, 0.8);
 
     &-heading {
@@ -35,12 +35,15 @@
       padding: 3px 1rem;
     }
 
+    &-content {
+      padding: 2rem 1rem;
+    }
+
     &-friends-grid {  
       display: grid;
       grid-gap: 1.5rem;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: 1fr 1fr;
-      
     }
   }
 }

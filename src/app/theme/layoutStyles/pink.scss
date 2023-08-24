@@ -4,15 +4,32 @@
   &.pink {
     background-color: pink;
     background-image:  url('../../../../public/heart-bg.jpeg');
-    // height: 400px;
-    // width: 400px;
     
-    .profile--section {
-      // background-color: hsla(0, 0%, 100%, 0.8);
-      border: 4px solid var(--dark-pink);
+    .profile {
+      &--section {
+        border: 4px solid var(--dark-pink);
+      }
+
+      &--section-heading {
+        background-color: var(--dark-pink);
+        color: white;
+      }
+
+      &--network {
+        border: 4px solid var(--dark-pink);
+      }
     }
 
-    .profile--section-heading {
+    // Sidebar.
+    .interests {
+      &--category {
+        background-color: pink;
+        color: black;
+      }
+    }
+
+    // Projects.
+    .profile--section-friends-project {
       background-color: var(--dark-pink);
       color: white;
     }
