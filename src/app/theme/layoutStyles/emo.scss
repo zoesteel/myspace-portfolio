@@ -3,7 +3,13 @@
   &.emo {
     background-color: black;
     background-image:  url('../../../../public/emo.jpeg');
-    
+
+    #profile-style-radio-group {    
+      span {
+        color: white;
+      }
+    }
+
     .profile {
       &--section {
         background-color: hsla(0, 0%, 0%, 0.9);
@@ -19,6 +25,7 @@
       &--network {
         background-color: hsla(0, 0%, 0%, 0.9);
         color: white;
+        outline: none;
       }
 
       // Projects.

@@ -1,6 +1,6 @@
 body {
-  font-family: Verdana Bold, Verdana;
-  font-size: 14px;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
   font-weight: 500;
   background-color: white;
 }

@@ -9,6 +9,9 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
+  --body-font: 'Verdana Bold', 'Verdana', 'Arial', 'Helvetica', sans-serif;
+  --body-font-size: 14px;
+
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
     #16abff33 0deg,

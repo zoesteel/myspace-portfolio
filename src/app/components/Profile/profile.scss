@@ -2,26 +2,38 @@
 
 .profile {
   &--container {
-    display: grid;
     width: 100vw;
     max-width: 100%;
-    grid-template-columns: 2fr 4fr;
     column-gap: 3rem;
     row-gap: 2rem;;
     padding: 2rem;
     border: 4px transparent;
+    
+    @media screen and (min-width: 800px) {
+      display: grid;
+      grid-template-columns: minmax(0px, 1fr) minmax(0px, 2fr);
+    }
+    
+    @media screen and (min-width: 1200px) {
+      display: grid;
+      grid-template-columns: minmax(0px, 2fr) minmax(0px, 4fr);
+    }
   }
 
   &--network {
     background-color: hsla(0, 0%, 100%, 0.8);
-    border: 1px solid black;
+    border: 4px solid transparent;
+    outline: 1px solid black;
     padding: 3rem 1rem;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     font-weight: 600;
     font-size: 1.25rem;
     margin: 0 auto 2rem auto;
+    @media screen and (min-width: 800px) {
+      display: flex;
+    }
   }
 
   &--section {
@@ -41,9 +53,18 @@
 
     &-friends-grid {  
       display: grid;
+      flex-wrap: wrap;
       grid-gap: 1.5rem;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       grid-template-rows: 1fr 1fr;
+
+      @media screen and (min-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (min-width: 1200px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
   }
 }

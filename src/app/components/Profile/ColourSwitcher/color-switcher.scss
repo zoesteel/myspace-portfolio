@@ -1,3 +1,9 @@
 #profile-style-radio-group {
-  display: flex;
+  display: inline-block;
+
+  span {
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
+
+  }
 }

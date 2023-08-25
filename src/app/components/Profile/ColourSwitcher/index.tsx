@@ -1,4 +1,5 @@
 import {RadioGroup, FormControlLabel, Radio} from '@mui/material';
+import './color-switcher.scss';
 
 export default function ColourSwitcher({onChange, layoutType}) {
   return (

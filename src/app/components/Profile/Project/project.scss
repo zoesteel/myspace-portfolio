@@ -1,8 +1,10 @@
 .profile--section-friends-project {
   img {
     object-fit: cover;
+    max-width: 100%;
   }
   background-color: #79B0E1;
   min-height: 150px;
-  width: 100%;
+  display: block;
+
 }
