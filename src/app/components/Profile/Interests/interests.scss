@@ -11,16 +11,16 @@
     // padding: 3px;
   }
 
-  &--info {
-    padding: 3px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 3px;
-    grid-row-gap: 3px;
-    > div {
-      padding: 5px;
-    }
-  }
+  // &--info {
+  //   padding: 3px;
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+  //   grid-column-gap: 3px;
+  //   grid-row-gap: 3px;
+  //   > div {
+  //     padding: 5px;
+  //   }
+  // }
 
   &--category {
     background-color: $light-blue;

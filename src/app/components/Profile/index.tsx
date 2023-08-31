@@ -12,16 +12,11 @@ import Project from './Project';
 import ColourSwitcher from './ColourSwitcher';
 
 export default function Profile({person}) {
-  const [showDialog, setShowDialog] = useState(false);
-  const projectOpen = () => setShowDialog(true);
-  const projectClose = () => setShowDialog(false);
 
-  const [layoutType, setLayoutType] = useState('default');
+  const storedLayout = JSON.parse(localStorage.getItem('layoutType'));
+  const initLayout = storedLayout ? storedLayout : 'default';
 
-  useEffect(() => {
-    const storedLayout = JSON.parse(localStorage.getItem('layoutType'));
-    storedLayout ? setLayoutType(storedLayout) : setLayoutType('default');
-  }, []);
+  const [layoutType, setLayoutType] = useState(initLayout);
 
   const handleChange = (e) => {
     setLayoutType(e.target.value);
@@ -52,21 +47,21 @@ export default function Profile({person}) {
             <h4>{`${person.name}'s Project Space`}</h4>
           </div>
           <div className='profile--section-content profile--section-friends-grid'>
-            <Project person={person} onClick={projectOpen} />
-            <Project person={person} onClick={projectOpen} />
-            <Project person={person} onClick={projectOpen} />
-            <Project person={person} onClick={projectOpen} />
-            <Project person={person} onClick={projectOpen} />
-            <Project person={person} onClick={projectOpen} />
-            <Project person={person} onClick={projectOpen} />
-            <Project person={person} onClick={projectOpen} />
+            {person.projects.map((project, index) => (<Project key={index} project={project} />))}
           </div>
         </div>
-        <button onClick={setShowDialog}>Open modal</button>
-        <Modal open={showDialog} onClose={projectClose} center>
-        <h2>Simple centered modal</h2>
-      </Modal>
+        <div className="profile--section profile--section-friends">
+          <div className="profile--section-heading">
+            <h4>{`${person.name}'s Friends Comments`}</h4>
+
+          </div>
+          <div className='profile--section-content profile--section-friends-grid'>
+           
+            <Link href="/herman">Herman</Link>
+          </div>
+        </div>
+       
       </main>
     </div>
   );
-} 
+}

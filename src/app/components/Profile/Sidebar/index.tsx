@@ -14,8 +14,8 @@ export default function Sidebar({person}) {
               <Image 
                 src={person.imgSrc}
                 alt=""
-                width="200"
-                height="200"
+                width="150"
+                height="170"
               />
             </div>
             <div className="profile--quote">{`"${person.quote}"`}</div>

@@ -56,7 +56,6 @@
       flex-wrap: wrap;
       grid-gap: 1.5rem;
       grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: 1fr 1fr;
 
       @media screen and (min-width: 800px) {
         grid-template-columns: repeat(2, 1fr);

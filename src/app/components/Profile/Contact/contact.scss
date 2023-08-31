@@ -2,7 +2,17 @@
   &--methods {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
     //temp
-    min-height: 100px;
+    // min-height: 100px;
+    padding: 1rem;  
+
+    &-method {
+      display: flex;
+    }
+
+    a {
+      color: rgb(37, 18, 209);
+    }
   }
 }

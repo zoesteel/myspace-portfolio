@@ -32,14 +32,24 @@
     }
 
     // Sidebar.
-    .interests {
-      &--category {
-        background-color: pink;
-        color: black;
+    .profile--sidebar {    
+      .sidebar-component {
+        border: 3px solid var(--dark-pink);
+
+        &--title {
+          background-color: var(--dark-pink);
+        }
+      }
+
+      .interests {
+        &--category {
+          background-color: hsla(327, 89%, 82%, 0.8);
+          color: black;
+        }
       }
     }
 
-    // Projects.
+    // Projects.  
     .profile--section-friends-project {
       background-color: var(--dark-pink);
       color: white;

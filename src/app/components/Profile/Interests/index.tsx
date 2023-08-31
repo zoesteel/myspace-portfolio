@@ -11,7 +11,7 @@ export default function Interests({person}) {
       <div className="interests--title sidebar-component--title">
         {`${person.name}'s Interests`}
       </div>
-      <div className="interests--info">
+      <div className="profile--details-table">
         <div className="interests--category">Skills</div>
         <div className="interests--answers">{skills}</div>
 

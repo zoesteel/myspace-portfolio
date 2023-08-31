@@ -12,7 +12,7 @@
 
     .profile {
       &--section {
-        background-color: hsla(0, 0%, 0%, 0.9);
+        background-color: hsla(0, 0%, 0%, 0.75);
         border: 4px solid white;
         color: white;
       }
@@ -23,23 +23,37 @@
       }
 
       &--network {
-        background-color: hsla(0, 0%, 0%, 0.9);
+        background-color: hsla(0, 0%, 0%, 0.75);
         color: white;
         outline: none;
+        border: 1px solid white;
       }
 
       // Projects.
       &--section-friends-project {
-        background-color: hsla(0, 0%, 0%, 0.9);
+        background-color: hsla(0, 0%, 0%, 0.75);
         color: white;
       }
     }
 
     // Sidebar.
-    .interests {
-      &--category {
-        background-color: lightgray;
-        color: black;
+    .profile--sidebar {    
+      .sidebar-component {
+        border: 3px solid white;
+        background-color: hsla(0, 0%, 0%, 0.75);
+        color: white;
+
+        &--title {
+          background-color: black;
+        }
+      }
+
+      .interests {
+        &--category {
+          background-color: #706e6e;
+          opacity: 0.9;
+          color: black;
+        }
       }
     }
   }
